@@ -19,7 +19,7 @@ Install and configure the i3status panel-bar status area utility.
 * Install and configure the [i3status](https://i3wm.org/i3status/manpage.html#_external_scripts_programs_with_i3status)
   utility.
 * i3status displays time/date, battery, volume, etc items in a window manager's
-  panel bar (ak tray).
+  panel bar (aka tray).
 * i3status was designed to work with the [i3bar](https://i3wm.org/docs/userguide.html#_configuring_i3bar)
   panel bar, which is bundled with the core [i3wm](https://i3wm.org/), but it
   will also display status items in other bars, such as [dzen2](https://github.com/robm/dzen)
