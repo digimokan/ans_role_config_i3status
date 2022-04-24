@@ -1,0 +1,7 @@
+- name: "Install the 'i3status' package"
+  ansible.builtin.package:
+    name: i3status
+    state: present
+  become: true
+  become_user: root
+

@@ -1,0 +1,10 @@
+- name: "Configure all Picom settings in '{{ picom_config_path }}'"
+  ansible.builtin.template:
+    dest: "{{ picom_config_path }}"
+    src: "picom_conf.j2"
+    owner: 'root'
+    mode: '644'
+    force: yes
+  become: true
+  become_user: root
+

@@ -1,0 +1,6 @@
+- name: "Install i3status"
+  ansible.builtin.include_tasks: install/main.yml
+
+- name: "Configure i3status"
+  ansible.builtin.include_tasks: configure/main.yml
+
