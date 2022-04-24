@@ -29,7 +29,7 @@ Install and configure the i3status panel-bar status area utility.
 
 * Ubuntu bionic (18.04), focal (20.04), hirsute (21.04), impish (21.10)
 * Arch Linux
-* FreeBSD.
+* FreeBSD
 
 ## Quick Start
 
