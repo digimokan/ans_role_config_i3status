@@ -1,0 +1,25 @@
+galaxy_info:
+  author: digimokan
+  description: "Install and configure the i3status panel-bar status area utility"
+  license: "MIT"
+  min_ansible_version: 2.7
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - hirsute
+        - impish
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - ubuntu
+    - freebsd
+    - i3
+    - i3status
+
