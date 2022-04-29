@@ -41,6 +41,7 @@ volume master {
 
 battery all {
   format = "{{ i3status_status_item_labels.battery }} %percentage"
+  format_down = "{{ i3status_status_item_labels.battery }} ---"
   format_percentage = "%.03f%s"
   low_threshold = 35
   threshold_type = percentage
