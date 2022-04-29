@@ -1,0 +1,35 @@
+# command to execute to start i3status
+i3status_start_cmd: 'i3status'
+
+# command to execute to start i3status
+i3status_config_file_path: "/home/{{ i3status_user_name }}/.config/i3status/config"
+
+# format of the output stream to pass to external status bar command
+# currently supports 'i3bar', 'dzen2', 'xmobar', `lemonbar`, 'term', 'none'
+i3status_panel_bar_output_format: 'none'
+
+# icons/labels for status items
+i3status_status_item_labels:
+  ping: '⇄'
+  wired_conn: '⊸'
+  wifi_conn: '♎'
+  volume: '☊'
+  screen_brightness: '☼'
+  battery: '⚡'
+  load_avg: '↻'
+  date_time: '❖'
+  vcs_tree: '☈'
+
+# separator symbol between status items
+i3status_status_item_separator: '│'
+
+# colors for ok/degraded/failed status items, and item separator
+i3status_status_item_colors:
+  label: '#B9B9BA'
+  label_for_degraded: '#BF8301'
+  label_for_failed: '#E00025'
+  separator: '#007C8A'
+
+# interval to refresh the displayed status items, in seconds
+i3status_item_refresh_interval: 1
+

@@ -1,0 +1,56 @@
+# vim: set filetype=conf:
+# ANSIBLE-MANAGED CONFIGURATION FILE
+# Local config sample (the default/system config, overriden by this file):
+#   {{ i3status_system_config_path }}
+# Upstream config source:
+#   https://github.com/i3/i3status/blob/master/etc/i3status.conf
+
+general {
+  output_format = {{ i3status_panel_bar_output_format }}
+  separator = {{ i3status_status_item_separator }}
+  colors = true
+  color_good = {{ i3status_status_item_colors.label }}
+  color_degraded = {{ i3status_status_item_colors.label_for_degraded }}
+  color_bad = {{ i3status_status_item_colors.label_for_failed }}
+  color_separator = {{ i3status_status_item_colors.separator }}
+  interval = {{ i3status_item_refresh_interval }}
+}
+
+{{ 'order += "ethernet _first_"' if show_wired_up_status_item else '# do not show wired up/down' }}
+{{ 'order += "wireless _first_"' if show_wifi_signal_status_item else '# do not show wifi signal' }}
+{{ 'order += "volume master"' if show_audio_volume_status_item else '# do not show audio volume' }}
+{{ 'order += "battery all"' if show_batt_soc_status_item else '# do not show battery' }}
+{{ 'order += "load"' if show_sys_load_avg_status_item else '# do not show system load average' }}
+{{ 'order += "time"' if show_date_time_status_item else '# do not show date and time' }}
+
+ethernet _first_ {
+  format_up = "{{ i3status_status_item_labels.wired_conn }} CON"
+  format_down = "{{ i3status_status_item_labels.wired_conn }} ---"
+}
+
+wireless _first_ {
+  format_up = "{{ i3status_status_item_labels.wifi_conn }} %quality"
+  format_down = "{{ i3status_status_item_labels.wifi_conn }} ---"
+  format_quality: "%03d%s"
+}
+
+volume master {
+  format = "{{ i3status_status_item_labels.volume }} %volume"
+  format_muted = "{{ i3status_status_item_labels.volume }} ---"
+}
+
+battery all {
+  format = "{{ i3status_status_item_labels.battery }} %percentage"
+  format_percentage: "%.03f%s"
+  low_threshold: 35
+  threshold_type: percentage
+}
+
+load {
+  format = "{{ i3status_status_item_labels.load_avg }} %1min"
+}
+
+time {
+  format = "{{ i3status_status_item_labels.date_time }} %a %d %b %H:%M"
+}
+

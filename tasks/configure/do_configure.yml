@@ -1,8 +1,8 @@
-- name: "Configure all Picom settings in '{{ picom_config_path }}'"
+- name: "Configure all i3status behavior in '{{ i3status_config_file_path }}'"
   ansible.builtin.template:
-    dest: "{{ picom_config_path }}"
-    src: "picom_conf.j2"
-    owner: 'root'
+    dest: "{{ i3status_config_file_path }}"
+    src: "config.j2"
+    owner: "{{ i3status_user_name }}"
     mode: '644'
     force: yes
   become: true

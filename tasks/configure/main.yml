@@ -1,12 +1,12 @@
-# - name: "Do configuration tasks for Linux"
-#   ansible.builtin.include_tasks: do_configure.yml
-#   vars:
-#     picom_config_path: "{{ linux_picom_config_path }}"
-#   when: ansible_system == "Linux"
+- name: "Do configuration tasks for Linux"
+  ansible.builtin.include_tasks: do_configure.yml
+  vars:
+    i3status_system_config_path: "{{ linux_i3status_system_config_path }}"
+  when: ansible_system == "Linux"
 
-# - name: "Do configuration tasks for FreeBSD"
-#   ansible.builtin.include_tasks: do_configure.yml
-#   vars:
-#     picom_config_path: "{{ freebsd_picom_config_path }}"
-#   when: ansible_os_family == "FreeBSD"
+- name: "Do configuration tasks for FreeBSD"
+  ansible.builtin.include_tasks: do_configure.yml
+  vars:
+    i3status_system_config_path: "{{ freebsd_i3status_system_config_path }}"
+  when: ansible_os_family == "FreeBSD"
 

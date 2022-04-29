@@ -1,0 +1,21 @@
+# Show or hide status items, in this order
+# See templates/config.j2 for item display formats
+
+# show that the wired ethernet interface is up or down
+show_wired_up_status_item: true
+
+# show that the wireless interface is up or down, and show its signal strength
+show_wifi_signal_status_item: false
+
+# show current volume level of the default audio output (i.e. "sink")
+show_audio_volume_status_item: false
+
+# show current battery state of charge percentage, and charging/full/etc
+show_batt_soc_status_item: false
+
+# show system load average in last 1 minute
+show_sys_load_avg_status_item: false
+
+# show current date and time
+show_date_time_status_item: true
+
