@@ -6,13 +6,13 @@
 #   https://github.com/i3/i3status/blob/master/etc/i3status.conf
 
 general {
-  output_format = {{ i3status_panel_bar_output_format }}
-  separator = {{ i3status_status_item_separator }}
+  output_format = "{{ i3status_panel_bar_output_format }}"
+  separator = "{{ i3status_status_item_separator }}"
   colors = true
-  color_good = {{ i3status_status_item_colors.label }}
-  color_degraded = {{ i3status_status_item_colors.label_for_degraded }}
-  color_bad = {{ i3status_status_item_colors.label_for_failed }}
-  color_separator = {{ i3status_status_item_colors.separator }}
+  color_good = "{{ i3status_status_item_colors.label }}"
+  color_degraded = "{{ i3status_status_item_colors.label_for_degraded }}"
+  color_bad = "{{ i3status_status_item_colors.label_for_failed }}"
+  color_separator = "{{ i3status_status_item_colors.separator }}"
   interval = {{ i3status_item_refresh_interval }}
 }
 
@@ -31,7 +31,7 @@ ethernet _first_ {
 wireless _first_ {
   format_up = "{{ i3status_status_item_labels.wifi_conn }} %quality"
   format_down = "{{ i3status_status_item_labels.wifi_conn }} ---"
-  format_quality: "%03d%s"
+  format_quality = "%03d%s"
 }
 
 volume master {
@@ -41,9 +41,9 @@ volume master {
 
 battery all {
   format = "{{ i3status_status_item_labels.battery }} %percentage"
-  format_percentage: "%.03f%s"
-  low_threshold: 35
-  threshold_type: percentage
+  format_percentage = "%.03f%s"
+  low_threshold = 35
+  threshold_type = percentage
 }
 
 load {
