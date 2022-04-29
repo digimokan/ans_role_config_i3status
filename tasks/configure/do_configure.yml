@@ -1,3 +1,12 @@
+- name: "Create user config file directories, if not exist"
+  ansible.builtin.file:
+    path: "{{ i3status_config_file_path | dirname }}"
+    state: directory
+    owner: "{{ i3status_user_name }}"
+    mode: '755'
+  become: true
+  become_user: root
+
 - name: "Configure all i3status behavior in '{{ i3status_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ i3status_config_file_path }}"
