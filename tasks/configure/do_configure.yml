@@ -13,7 +13,7 @@
     src: "config.j2"
     owner: "{{ i3status_user_name }}"
     mode: '644'
-    force: yes
+    force: true
   become: true
   become_user: root
 
